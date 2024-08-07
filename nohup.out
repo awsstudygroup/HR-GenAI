@@ -1,0 +1,73 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8081
+  Network URL: http://172.31.89.235:8081
+  External URL: http://54.209.129.239:8081
+
+2024-08-05 07:05:45.140 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2024-08-05 07:06:33.155 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/ubuntu/environment/HR-GenAI/pages/3_Search_Jobs.py", line 19, in <module>
+    response = glib.search_jobs(input_text, st_callback)
+  File "/home/ubuntu/environment/HR-GenAI/recruitment_lib.py", line 136, in search_jobs
+    response = agent({
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/chains/base.py", line 310, in __call__
+    raise e
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/chains/base.py", line 304, in __call__
+    self._call(inputs, run_manager=run_manager)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/agents/agent.py", line 1146, in _call
+    next_step_output = self._take_next_step(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/agents/agent.py", line 996, in _take_next_step
+    observation = tool.run(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/tools/base.py", line 365, in run
+    raise e
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/tools/base.py", line 337, in run
+    self._run(*tool_args, run_manager=run_manager, **tool_kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/tools/base.py", line 516, in _run
+    else self.func(*args, **kwargs)
+  File "/home/ubuntu/environment/HR-GenAI/recruitment_lib.py", line 93, in get_jobs
+    tool = GoogleJobsQueryRun(api_wrapper=GoogleJobsAPIWrapper())
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/pydantic/v1/main.py", line 341, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 1 validation error for GoogleJobsAPIWrapper
+__root__
+  Did not find serp_api_key, please add an environment variable `SERPAPI_API_KEY` which contains it, or pass `serp_api_key` as a named parameter. (type=value_error)
+2024-08-05 07:07:08.164 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/ubuntu/environment/HR-GenAI/pages/3_Search_Jobs.py", line 19, in <module>
+    response = glib.search_jobs(input_text, st_callback)
+  File "/home/ubuntu/environment/HR-GenAI/recruitment_lib.py", line 136, in search_jobs
+    response = agent({
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/chains/base.py", line 310, in __call__
+    raise e
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/chains/base.py", line 304, in __call__
+    self._call(inputs, run_manager=run_manager)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/agents/agent.py", line 1146, in _call
+    next_step_output = self._take_next_step(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/agents/agent.py", line 996, in _take_next_step
+    observation = tool.run(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/tools/base.py", line 365, in run
+    raise e
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/tools/base.py", line 337, in run
+    self._run(*tool_args, run_manager=run_manager, **tool_kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/langchain/tools/base.py", line 516, in _run
+    else self.func(*args, **kwargs)
+  File "/home/ubuntu/environment/HR-GenAI/recruitment_lib.py", line 93, in get_jobs
+    tool = GoogleJobsQueryRun(api_wrapper=GoogleJobsAPIWrapper())
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/pydantic/v1/main.py", line 341, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 1 validation error for GoogleJobsAPIWrapper
+__root__
+  Did not find serp_api_key, please add an environment variable `SERPAPI_API_KEY` which contains it, or pass `serp_api_key` as a named parameter. (type=value_error)
+2024-08-05 07:25:09.328 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2024-08-05 07:25:19.567 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2024-08-05 07:25:31.957 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2024-08-05 07:25:35.904 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
